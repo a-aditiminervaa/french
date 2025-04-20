@@ -12,3 +12,8 @@ Welcome to my French Phonetics Learning Platform, a user-friendly website design
 
 ## Purpose
 This project aims to provide a digital space where users can immerse themselves in the nuances of French phonetics. Whether you're a beginner or refining your pronunciation, this tool enables consistent progress by keeping a personalized record of your journey.
+
+# Know More 
+If you wanna see how it is judging your prnounciation then please do visit the below given repo
+it is a pthon script
+https://github.com/a-aditiminervaa/french-ai

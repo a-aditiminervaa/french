@@ -101,7 +101,7 @@
 
         .signup-header {
             text-align: center;
-            margin-bottom: 20px; /* Reduced margin */
+            margin-bottom: 20px; 
         }
 
         .signup-header h1 {
@@ -116,20 +116,20 @@
         }
 
         .form-group {
-            margin-bottom: 15px; /* Reduced margin */
+            margin-bottom: 15px; 
             position: relative;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 6px; /* Reduced margin */
+            margin-bottom: 6px; 
             font-size: 14px;
             color: #555;
         }
 
         .form-group input {
             width: 100%;
-            padding: 10px 12px; /* Reduced padding */
+            padding: 10px 12px; 
             border: 1px solid #ddd;
             border-radius: 4px;
             font-size: 14px;
@@ -144,7 +144,7 @@
         .form-group .error-message {
             color: var(--error-color);
             font-size: 12px;
-            margin-top: 3px; /* Reduced margin */
+            margin-top: 3px; 
             display: none;
         }
 
@@ -160,13 +160,13 @@
             background-color: var(--primary-color);
             color: white;
             border: none;
-            padding: 10px; /* Reduced padding */
+            padding: 10px; 
             border-radius: 4px;
             cursor: pointer;
             font-size: 16px;
             transition: background-color 0.3s;
             width: 100%;
-            margin-bottom: 15px; /* Reduced margin */
+            margin-bottom: 15px; 
         }
 
         .signup-button:hover {
@@ -192,14 +192,14 @@
         .password-requirements {
             background-color: var(--light-accent);
             border-radius: 4px;
-            padding: 8px 12px; /* Reduced padding */
-            margin-bottom: 15px; /* Reduced margin */
+            padding: 8px 12px; 
+            margin-bottom: 15px; 
             font-size: 13px;
         }
 
         .password-requirements h3 {
             font-size: 14px;
-            margin-bottom: 6px; /* Reduced margin */
+            margin-bottom: 6px;
             color: var(--primary-color);
         }
 
@@ -286,7 +286,7 @@
             const password = document.getElementById('password').value;
             const confirmPassword = document.getElementById('confirmPassword').value;
             
-            // Reset previous error states
+            // Reseting previous error states
             document.getElementById('usernameGroup').classList.remove('error');
             document.getElementById('emailGroup').classList.remove('error');
             document.getElementById('passwordGroup').classList.remove('error');
@@ -294,27 +294,27 @@
             
             let isValid = true;
             
-            // Validate username
+            // Validating username
             if (username.length < 3) {
                 document.getElementById('usernameGroup').classList.add('error');
                 isValid = false;
             }
             
-            // Validate email format
+            // Validating email format
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(email)) {
                 document.getElementById('emailGroup').classList.add('error');
                 isValid = false;
             }
             
-            // Validate password
+            // Validating password
             const passwordRegex = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})/;
             if (!passwordRegex.test(password)) {
                 document.getElementById('passwordGroup').classList.add('error');
                 isValid = false;
             }
             
-            // Validate password match
+            // Validating password match
             if (password !== confirmPassword) {
                 document.getElementById('confirmPasswordGroup').classList.add('error');
                 isValid = false;
@@ -328,26 +328,7 @@
                 // For now, show success message
                 alert('Account created successfully! You can now log in.');
                 
-                // When Firebase is integrated, you would use code similar to this:
-                /*
-                firebase.auth().createUserWithEmailAndPassword(email, password)
-                    .then((userCredential) => {
-                        // Update the user's profile with username
-                        return userCredential.user.updateProfile({
-                            displayName: username
-                        });
-                    })
-                    .then(() => {
-                        // Account created successfully
-                        alert('Account created successfully!');
-                        window.location.href = 'login.html'; // Redirect to login
-                    })
-                    .catch((error) => {
-                        const errorCode = error.code;
-                        const errorMessage = error.message;
-                        alert(`Error: ${errorMessage}`);
-                    });
-                */
+               
             }
         });
         

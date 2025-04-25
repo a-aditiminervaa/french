@@ -17,3 +17,6 @@ This project aims to provide a digital space where users can immerse themselves 
 If you wanna see how it is judging your prnounciation then please do visit the below given repo
 it is a pthon script
 https://github.com/a-aditiminervaa/french-ai
+
+## Website Link
+https://a-aditiminervaa.github.io/french/
